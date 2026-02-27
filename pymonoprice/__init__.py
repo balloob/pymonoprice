@@ -135,6 +135,7 @@ class Monoprice:
             buffer_character_count=0,
             buffer_burst_timeout=TIMEOUT,
         )
+        # serialx requires explicit open/configure outside of a context manager.
         self._port.open()
         self._port.configure_port()
 
